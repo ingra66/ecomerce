@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'BeltSpot - Tu Tienda Online')</title>
-    <meta name="description" content="@yield('description', 'Descubre los mejores productos en BeltSpot')">
+    <title>@yield('title', 'Beltspot - Tu Tienda Online')</title>
+    <meta name="description" content="@yield('description', 'Descubre los mejores productos en Beltspot')">
+    <link rel="icon" type="image/png" href="{{ asset('beltspot-logo.png') }}">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,16 +35,16 @@
     
     @stack('styles')
 </head>
-<body class="bg-dark text-gray-100 min-h-screen">
+<body class="min-h-screen text-gray-100" style="background: linear-gradient(120deg, #dc2626 10%, #000 90%);">
     <!-- Header -->
-    <header class="bg-darker border-b border-gray-800 sticky top-0 z-50">
+    <header class="bg-neutral-900 border-b border-gray-800 sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <a href="{{ route('home') }}" class="text-2xl font-bold text-primary">
-                        <i class="fas fa-shopping-bag mr-2"></i>
-                        BeltSpot
+                    <a href="{{ route('home') }}" class="flex items-center text-2xl font-bold text-primary">
+                        <img src="{{ asset('images/beltspot-logo.png') }}" alt="Beltspot Logo" class="h-10 w-auto mr-2">
+                        Beltspot
                     </a>
                 </div>
 
@@ -69,7 +70,7 @@
                     <div class="relative hidden md:block">
                         <input type="text" 
                                placeholder="Buscar productos..." 
-                               class="bg-secondary border border-gray-700 rounded-lg px-4 py-2 pl-10 text-sm text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+                               class="bg-neutral-900 border border-gray-700 rounded-lg px-4 py-2 pl-10 text-sm text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
                         <i class="fas fa-search absolute left-3 top-2.5 text-gray-400"></i>
                     </div>
 
@@ -94,16 +95,22 @@
                                 <i class="fas fa-chevron-down ml-1"></i>
                             </button>
                             <div class="absolute right-0 mt-2 w-48 bg-darker border border-gray-700 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                                <a href="{{ route('profile') }}" class="block px-4 py-2 text-gray-300 hover:bg-secondary hover:text-primary">
+                                @if(auth()->user()->role === 'administrador' || auth()->user()->role === 'vendedor')
+                                    <a href="/admin" class="block px-4 py-2 text-gray-300 hover:bg-neutral-900 hover:text-primary">
+                                        <i class="fas fa-cogs mr-2"></i> Panel de administración
+                                    </a>
+                                    <hr class="border-gray-700">
+                                @endif
+                                <a href="{{ route('profile') }}" class="block px-4 py-2 text-gray-300 hover:bg-neutral-900 hover:text-primary">
                                     <i class="fas fa-user mr-2"></i> Mi Perfil
                                 </a>
-                                <a href="{{ route('orders.index') }}" class="block px-4 py-2 text-gray-300 hover:bg-secondary hover:text-primary">
+                                <a href="{{ route('orders.index') }}" class="block px-4 py-2 text-gray-300 hover:bg-neutral-900 hover:text-primary">
                                     <i class="fas fa-box mr-2"></i> Mis Órdenes
                                 </a>
                                 <hr class="border-gray-700">
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    <button type="submit" class="block w-full text-left px-4 py-2 text-gray-300 hover:bg-secondary hover:text-primary">
+                                    <button type="submit" class="block w-full text-left px-4 py-2 text-gray-300 hover:bg-neutral-900 hover:text-primary">
                                         <i class="fas fa-sign-out-alt mr-2"></i> Cerrar Sesión
                                     </button>
                                 </form>
@@ -131,12 +138,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-darker border-t border-gray-800 mt-16">
+    <footer class="bg-neutral-900 border-t border-gray-800 mt-16">
         <div class="container mx-auto px-4 py-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Información de la Tienda -->
                 <div>
-                    <h3 class="text-xl font-bold text-primary mb-4">BeltSpot</h3>
+                    <h3 class="flex items-center text-xl font-bold text-primary mb-4">
+                        <img src="{{ asset('images/beltspot-logo.png') }}" alt="Beltspot Logo" class="h-8 w-auto mr-2">Beltspot
+                    </h3>
                     <p class="text-gray-400 text-sm">
                         Tu tienda online de confianza. Productos de calidad al mejor precio.
                     </p>
@@ -191,7 +200,7 @@
             <!-- Copyright -->
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 text-sm">
-                    © {{ date('Y') }} BeltSpot. Todos los derechos reservados.
+                    © {{ date('Y') }} Beltspot. Todos los derechos reservados.
                 </p>
                 <div class="flex space-x-4 mt-4 md:mt-0">
                     <img src="https://www.mercadopago.com/developers/static/img/logo/logo-mercado-pago.png" 

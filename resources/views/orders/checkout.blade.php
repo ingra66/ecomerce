@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Checkout - BeltSpot')
+@section('title', 'Checkout - Beltspot')
 @section('description', 'Completa tu compra de forma segura')
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
             <!-- Header -->
@@ -18,7 +18,7 @@
                 
                 <!-- Información de Envío -->
                 <div class="lg:col-span-2">
-                    <div class="bg-secondary rounded-lg border border-gray-700 p-6 mb-6">
+                    <div class="bg-neutral-900 rounded-lg border border-gray-700 p-6 mb-6">
                         <h2 class="text-xl font-semibold text-white mb-6">
                             <i class="fas fa-shipping-fast text-primary mr-2"></i>
                             Información de Envío
@@ -33,7 +33,7 @@
                                        id="shipping_address" 
                                        name="shipping_address" 
                                        required
-                                       class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
+                                       class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
                                        placeholder="Calle y número">
                             </div>
                             
@@ -45,7 +45,7 @@
                                        id="shipping_city" 
                                        name="shipping_city" 
                                        required
-                                       class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
+                                       class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
                                        placeholder="Ciudad">
                             </div>
                             
@@ -57,7 +57,7 @@
                                        id="shipping_state" 
                                        name="shipping_state" 
                                        required
-                                       class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
+                                       class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
                                        placeholder="Provincia">
                             </div>
                             
@@ -69,7 +69,7 @@
                                        id="shipping_zip" 
                                        name="shipping_zip" 
                                        required
-                                       class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
+                                       class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
                                        placeholder="Código postal">
                             </div>
                             
@@ -81,26 +81,26 @@
                                        id="shipping_phone" 
                                        name="shipping_phone" 
                                        required
-                                       class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
+                                       class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
                                        placeholder="+54 11 1234-5678">
                             </div>
                         </div>
                     </div>
                     
                     <!-- Método de Pago -->
-                    <div class="bg-secondary rounded-lg border border-gray-700 p-6">
+                    <div class="bg-neutral-900 rounded-lg border border-gray-700 p-6">
                         <h2 class="text-xl font-semibold text-white mb-6">
                             <i class="fas fa-credit-card text-primary mr-2"></i>
                             Método de Pago
                         </h2>
                         
                         <div class="space-y-4">
-                            <label class="flex items-center p-4 bg-dark border border-gray-700 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                            <label class="flex items-center p-4 bg-black border border-gray-700 rounded-lg cursor-pointer hover:border-primary transition-colors">
                                 <input type="radio" 
                                        name="payment_method" 
                                        value="mercadopago" 
                                        checked
-                                       class="text-primary focus:ring-primary bg-dark border-gray-700">
+                                       class="text-primary focus:ring-primary bg-black border-gray-700">
                                 <div class="ml-3">
                                     <div class="flex items-center">
                                         <img src="https://http2.mlstatic.com/frontend-assets/mp-brand/rebrand/MP_white_logo.png" 
@@ -117,7 +117,7 @@
                 
                 <!-- Resumen del Pedido -->
                 <div class="lg:col-span-1">
-                    <div class="bg-secondary rounded-lg border border-gray-700 p-6 sticky top-4">
+                    <div class="bg-neutral-900 rounded-lg border border-gray-700 p-6 sticky top-4">
                         <h2 class="text-xl font-semibold text-white mb-6">Resumen del Pedido</h2>
                         
                         <!-- Productos -->
@@ -170,7 +170,7 @@
                         </button>
                         
                         <!-- Información de Seguridad -->
-                        <div class="mt-6 p-4 bg-dark rounded-lg border border-gray-700">
+                        <div class="mt-6 p-4 bg-black rounded-lg border border-gray-700">
                             <h3 class="text-white font-semibold mb-2 text-sm">
                                 <i class="fas fa-shield-alt text-primary mr-2"></i>
                                 Compra Segura

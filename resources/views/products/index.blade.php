@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Productos - BeltSpot')
+@section('title', 'Productos - Beltspot')
 @section('description', 'Descubre todos nuestros productos')
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <!-- Header -->
         <div class="mb-8">
@@ -15,7 +15,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <!-- Filtros -->
             <div class="lg:col-span-1">
-                <div class="bg-secondary rounded-lg p-6 border border-gray-700 sticky top-24">
+                <div class="bg-neutral-900 rounded-lg p-6 border border-gray-700 sticky top-24">
                     <h3 class="text-white font-semibold text-lg mb-4">Filtros</h3>
                     
                     <!-- Buscador -->
@@ -26,7 +26,7 @@
                                    name="search" 
                                    value="{{ request('search') }}"
                                    placeholder="Buscar productos..." 
-                                   class="w-full bg-dark border border-gray-700 rounded-lg px-3 py-2 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary">
+                                   class="w-full bg-black border border-gray-700 rounded-lg px-3 py-2 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary">
                         </form>
                     </div>
 
@@ -53,7 +53,7 @@
                         <label class="block text-gray-300 text-sm font-medium mb-2">Ordenar por</label>
                         <select name="sort_by" 
                                 onchange="this.form.submit()" 
-                                class="w-full bg-dark border border-gray-700 rounded-lg px-3 py-2 text-gray-100 focus:outline-none focus:border-primary">
+                                class="w-full bg-black border border-gray-700 rounded-lg px-3 py-2 text-gray-100 focus:outline-none focus:border-primary">
                             <option value="sort_order" {{ request('sort_by') == 'sort_order' ? 'selected' : '' }}>Más relevantes</option>
                             <option value="name" {{ request('sort_by') == 'name' ? 'selected' : '' }}>Nombre A-Z</option>
                             <option value="price" {{ request('sort_by') == 'price' ? 'selected' : '' }}>Precio menor</option>
@@ -70,7 +70,7 @@
                                    value="1" 
                                    {{ request('featured') ? 'checked' : '' }}
                                    onchange="this.form.submit()"
-                                   class="rounded border-gray-700 text-primary focus:ring-primary bg-dark">
+                                   class="rounded border-gray-700 text-primary focus:ring-primary bg-black">
                             <span class="ml-2 text-gray-300 text-sm">Solo destacados</span>
                         </label>
                         
@@ -80,7 +80,7 @@
                                    value="1" 
                                    {{ request('in_stock') ? 'checked' : '' }}
                                    onchange="this.form.submit()"
-                                   class="rounded border-gray-700 text-primary focus:ring-primary bg-dark">
+                                   class="rounded border-gray-700 text-primary focus:ring-primary bg-black">
                             <span class="ml-2 text-gray-300 text-sm">Solo en stock</span>
                         </label>
                     </div>
@@ -106,7 +106,7 @@
                 @if($products->count() > 0)
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     @foreach($products as $product)
-                    <div class="bg-secondary rounded-lg border border-gray-700 hover:border-primary transition-colors group">
+                    <div class="bg-neutral-900 rounded-lg border border-gray-700 hover:border-red-700 transition-colors group">
                         <div class="relative">
                             <a href="{{ route('product.show', $product->id) }}">
                                 <img src="{{ $product->primary_image_url }}" 
@@ -118,7 +118,7 @@
                                 -{{ $product->discount_percentage }}%
                             </div>
                             @endif
-                            <button class="absolute top-2 right-2 w-8 h-8 bg-dark bg-opacity-80 rounded-full flex items-center justify-center text-gray-300 hover:text-primary transition-colors">
+                            <button class="absolute top-2 right-2 w-8 h-8 bg-black bg-opacity-80 rounded-full flex items-center justify-center text-gray-300 hover:text-primary transition-colors">
                                 <i class="fas fa-heart"></i>
                             </button>
                         </div>

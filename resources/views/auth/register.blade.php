@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
-@section('title', 'Registrarse - BeltSpot')
-@section('description', 'Crea tu cuenta en BeltSpot')
+@section('title', 'Registrarse - Beltspot')
+@section('description', 'Crea tu cuenta en Beltspot')
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <div class="max-w-md mx-auto">
             <!-- Header -->
             <div class="text-center mb-8">
                 <h1 class="text-3xl font-bold text-white mb-2">Crear Cuenta</h1>
-                <p class="text-gray-400">Únete a BeltSpot y descubre productos increíbles</p>
+                <p class="text-gray-400">Únete a Beltspot y descubre productos increíbles</p>
             </div>
 
             <!-- Formulario de Registro -->
-            <div class="bg-secondary rounded-lg p-8 border border-gray-700">
+            <div class="bg-neutral-900 rounded-lg p-8 border border-gray-700">
                 <form method="POST" action="{{ route('register') }}" class="space-y-6">
                     @csrf
 
@@ -29,7 +29,7 @@
                                value="{{ old('name') }}"
                                required 
                                autofocus
-                               class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('name') border-red-500 @enderror"
+                               class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('name') border-red-500 @enderror"
                                placeholder="Tu nombre completo">
                         @error('name')
                             <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
@@ -46,7 +46,7 @@
                                name="email" 
                                value="{{ old('email') }}"
                                required
-                               class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('email') border-red-500 @enderror"
+                               class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('email') border-red-500 @enderror"
                                placeholder="tu@email.com">
                         @error('email')
                             <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
@@ -62,7 +62,7 @@
                                id="password" 
                                name="password" 
                                required
-                               class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('password') border-red-500 @enderror"
+                               class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('password') border-red-500 @enderror"
                                placeholder="Mínimo 8 caracteres">
                         @error('password')
                             <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
@@ -78,7 +78,7 @@
                                id="password_confirmation" 
                                name="password_confirmation" 
                                required
-                               class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
+                               class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
                                placeholder="Repite tu contraseña">
                     </div>
 
@@ -88,7 +88,7 @@
                                id="terms" 
                                name="terms" 
                                required
-                               class="mt-1 rounded border-gray-700 text-primary focus:ring-primary bg-dark">
+                               class="mt-1 rounded border-gray-700 text-primary focus:ring-primary bg-black">
                         <label for="terms" class="ml-2 text-gray-300 text-sm">
                             Acepto los 
                             <a href="#" class="text-primary hover:text-red-700">Términos y Condiciones</a> 
@@ -102,7 +102,7 @@
                         <input type="checkbox" 
                                id="newsletter" 
                                name="newsletter"
-                               class="mt-1 rounded border-gray-700 text-primary focus:ring-primary bg-dark">
+                               class="mt-1 rounded border-gray-700 text-primary focus:ring-primary bg-black">
                         <label for="newsletter" class="ml-2 text-gray-300 text-sm">
                             Quiero recibir ofertas y novedades por email
                         </label>
@@ -122,17 +122,17 @@
                         <div class="w-full border-t border-gray-700"></div>
                     </div>
                     <div class="relative flex justify-center text-sm">
-                        <span class="px-2 bg-secondary text-gray-400">O regístrate con</span>
+                        <span class="px-2 bg-neutral-900 text-gray-400">O regístrate con</span>
                     </div>
                 </div>
 
                 <!-- Registro Social -->
                 <div class="space-y-3">
-                    <button class="w-full bg-dark border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
+                    <button class="w-full bg-black border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
                         <i class="fab fa-google mr-2"></i>
                         Registrarse con Google
                     </button>
-                    <button class="w-full bg-dark border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
+                    <button class="w-full bg-black border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
                         <i class="fab fa-facebook mr-2"></i>
                         Registrarse con Facebook
                     </button>

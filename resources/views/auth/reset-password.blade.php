@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Restablecer Contraseña - BeltSpot')
+@section('title', 'Restablecer Contraseña - Beltspot')
 @section('description', 'Establece tu nueva contraseña')
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <div class="max-w-md mx-auto">
             <!-- Header -->
@@ -14,7 +14,7 @@
             </div>
 
             <!-- Formulario de Restablecimiento -->
-            <div class="bg-secondary rounded-lg p-8 border border-gray-700">
+            <div class="bg-neutral-900 rounded-lg p-8 border border-gray-700">
                 <form method="POST" action="{{ route('password.update') }}" class="space-y-6">
                     @csrf
 
@@ -32,7 +32,7 @@
                                value="{{ old('email', $request->email) }}"
                                required 
                                autofocus
-                               class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('email') border-red-500 @enderror"
+                               class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('email') border-red-500 @enderror"
                                placeholder="tu@email.com">
                         @error('email')
                             <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
@@ -48,7 +48,7 @@
                                id="password" 
                                name="password" 
                                required
-                               class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('password') border-red-500 @enderror"
+                               class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('password') border-red-500 @enderror"
                                placeholder="Mínimo 8 caracteres">
                         @error('password')
                             <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
@@ -64,12 +64,12 @@
                                id="password_confirmation" 
                                name="password_confirmation" 
                                required
-                               class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
+                               class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"
                                placeholder="Repite tu nueva contraseña">
                     </div>
 
                     <!-- Requisitos de Contraseña -->
-                    <div class="p-4 bg-dark rounded-lg border border-gray-700">
+                    <div class="p-4 bg-black rounded-lg border border-gray-700">
                         <h3 class="text-white font-semibold mb-2 text-sm">
                             <i class="fas fa-shield-alt text-primary mr-2"></i>
                             Requisitos de seguridad:

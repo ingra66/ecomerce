@@ -22,6 +22,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_active',
+        'role',
     ];
 
     /**
@@ -42,6 +44,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'is_active' => 'boolean',
     ];
 
     /**
@@ -90,5 +93,21 @@ class User extends Authenticatable
     public function getRecentOrdersAttribute()
     {
         return $this->orders()->latest()->take(5)->get();
+    }
+
+    /**
+     * Métodos helper para roles
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'administrador';
+    }
+    public function isSeller(): bool
+    {
+        return $this->role === 'vendedor';
+    }
+    public function isCustomer(): bool
+    {
+        return $this->role === 'cliente';
     }
 }

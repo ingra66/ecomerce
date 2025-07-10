@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Pago Exitoso - BeltSpot')
+@section('title', 'Pago Exitoso - Beltspot')
 @section('description', 'Tu pago se procesó correctamente')
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <div class="max-w-md mx-auto">
             <!-- Header -->
@@ -17,7 +17,7 @@
             </div>
 
             <!-- Contenido Principal -->
-            <div class="bg-secondary rounded-lg p-8 border border-gray-700">
+            <div class="bg-neutral-900 rounded-lg p-8 border border-gray-700">
                 <!-- Información del Pago -->
                 <div class="mb-6">
                     <div class="flex items-center justify-between mb-4">
@@ -51,14 +51,14 @@
                     </a>
                     
                     <a href="{{ route('home') }}" 
-                       class="block w-full bg-dark border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors text-center">
+                       class="block w-full bg-black border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors text-center">
                         <i class="fas fa-home mr-2"></i>
                         Volver al Inicio
                     </a>
                 </div>
 
                 <!-- Información Adicional -->
-                <div class="mt-8 p-4 bg-dark rounded-lg border border-gray-700">
+                <div class="mt-8 p-4 bg-black rounded-lg border border-gray-700">
                     <h3 class="text-white font-semibold mb-2 text-sm">
                         <i class="fas fa-info-circle text-primary mr-2"></i>
                         Próximos pasos:

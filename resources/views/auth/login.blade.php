@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Iniciar Sesión - BeltSpot')
-@section('description', 'Accede a tu cuenta de BeltSpot')
+@section('title', 'Iniciar Sesión - Beltspot')
+@section('description', 'Accede a tu cuenta de Beltspot')
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <div class="max-w-md mx-auto">
             <!-- Header -->
@@ -14,7 +14,7 @@
             </div>
 
             <!-- Formulario de Login -->
-            <div class="bg-secondary rounded-lg p-8 border border-gray-700">
+            <div class="bg-neutral-900 rounded-lg p-8 border border-gray-700">
                 <form method="POST" action="{{ route('login') }}" class="space-y-6">
                     @csrf
 
@@ -29,7 +29,7 @@
                                value="{{ old('email') }}"
                                required 
                                autofocus
-                               class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('email') border-red-500 @enderror"
+                               class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('email') border-red-500 @enderror"
                                placeholder="tu@email.com">
                         @error('email')
                             <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
@@ -45,7 +45,7 @@
                                id="password" 
                                name="password" 
                                required
-                               class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('password') border-red-500 @enderror"
+                               class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary @error('password') border-red-500 @enderror"
                                placeholder="Tu contraseña">
                         @error('password')
                             <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
@@ -57,7 +57,7 @@
                         <label class="flex items-center">
                             <input type="checkbox" 
                                    name="remember" 
-                                   class="rounded border-gray-700 text-primary focus:ring-primary bg-dark">
+                                   class="rounded border-gray-700 text-primary focus:ring-primary bg-black">
                             <span class="ml-2 text-gray-300 text-sm">Recordar sesión</span>
                         </label>
                         <a href="#" class="text-primary hover:text-red-700 text-sm transition-colors">
@@ -79,17 +79,17 @@
                         <div class="w-full border-t border-gray-700"></div>
                     </div>
                     <div class="relative flex justify-center text-sm">
-                        <span class="px-2 bg-secondary text-gray-400">O continúa con</span>
+                        <span class="px-2 bg-neutral-900 text-gray-400">O continúa con</span>
                     </div>
                 </div>
 
                 <!-- Login Social -->
                 <div class="space-y-3">
-                    <button class="w-full bg-dark border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
+                    <button class="w-full bg-black border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
                         <i class="fab fa-google mr-2"></i>
                         Continuar con Google
                     </button>
-                    <button class="w-full bg-dark border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
+                    <button class="w-full bg-black border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
                         <i class="fab fa-facebook mr-2"></i>
                         Continuar con Facebook
                     </button>

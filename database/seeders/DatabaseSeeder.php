@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
         // ]);
         
         $this->call([
+            AdminUserSeeder::class,
             EcommerceSettingsSeeder::class,
+            SupplierSeeder::class,
             SampleDataSeeder::class,
         ]);
     }

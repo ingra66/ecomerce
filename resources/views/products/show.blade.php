@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', $product->name . ' - BeltSpot')
+@section('title', $product->name . ' - Beltspot')
 @section('description', $product->short_description ?: $product->name)
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <!-- Breadcrumb -->
         <nav class="flex mb-8" aria-label="Breadcrumb">
@@ -45,7 +45,7 @@
             <div>
                 <div class="relative">
                     <!-- Imagen Principal -->
-                    <div class="bg-secondary rounded-lg overflow-hidden mb-4">
+                    <div class="bg-neutral-900 rounded-lg overflow-hidden mb-4">
                         <img src="{{ $product->primary_image_url }}" 
                              alt="{{ $product->name }}" 
                              id="main-image"
@@ -57,7 +57,7 @@
                     <div class="grid grid-cols-4 gap-2">
                         @foreach($product->images->take(4) as $image)
                         <button onclick="changeImage('{{ $image->image_url }}')" 
-                                class="bg-secondary rounded-lg overflow-hidden border-2 border-gray-700 hover:border-primary transition-colors">
+                                class="bg-neutral-900 rounded-lg overflow-hidden border-2 border-gray-700 hover:border-red-700 transition-colors">
                             <img src="{{ $image->image_url }}" 
                                  alt="{{ $product->name }}" 
                                  class="w-full h-20 object-cover">
@@ -112,7 +112,7 @@
                             <label class="block text-gray-300 text-sm font-medium mb-2">{{ ucfirst($variantType) }}</label>
                             <div class="flex flex-wrap gap-2">
                                 @foreach($variants as $variant)
-                                <button class="px-4 py-2 border border-gray-700 rounded-lg text-gray-300 hover:border-primary hover:text-primary transition-colors {{ $variant->in_stock ? '' : 'opacity-50 cursor-not-allowed' }}">
+                                <button class="px-4 py-2 border border-gray-700 rounded-lg text-gray-300 hover:border-red-700 hover:text-red-700 transition-colors {{ $variant->in_stock ? '' : 'opacity-50 cursor-not-allowed' }}">
                                     {{ $variant->value }}
                                     @if($variant->price_adjustment != 0)
                                     <span class="text-xs text-gray-400">{{ $variant->formatted_price_adjustment }}</span>
@@ -138,7 +138,7 @@
                                    value="1" 
                                    min="1" 
                                    max="{{ $product->stock }}"
-                                   class="w-16 text-center bg-dark border-0 text-white focus:outline-none">
+                                   class="w-16 text-center bg-black border-0 text-white focus:outline-none">
                             <button class="px-3 py-2 text-gray-300 hover:text-primary transition-colors">
                                 <i class="fas fa-plus"></i>
                             </button>
@@ -162,11 +162,11 @@
                         Comprar Ahora
                     </button>
                     <div class="flex space-x-3">
-                        <button class="flex-1 border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
+                        <button class="flex-1 border border-gray-700 hover:border-red-700 text-gray-300 hover:text-red-700 py-3 rounded-lg font-semibold transition-colors">
                             <i class="fas fa-heart mr-2"></i>
                             Agregar a Wishlist
                         </button>
-                        <button class="flex-1 border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
+                        <button class="flex-1 border border-gray-700 hover:border-red-700 text-gray-300 hover:text-red-700 py-3 rounded-lg font-semibold transition-colors">
                             <i class="fas fa-share mr-2"></i>
                             Compartir
                         </button>
@@ -201,7 +201,7 @@
         @if($product->description)
         <div class="mt-12">
             <h2 class="text-2xl font-bold text-white mb-6">Descripción</h2>
-            <div class="bg-secondary rounded-lg p-6 border border-gray-700">
+            <div class="bg-neutral-900 rounded-lg p-6 border border-gray-700">
                 <div class="text-gray-300 prose prose-invert max-w-none">
                     {!! nl2br(e($product->description)) !!}
                 </div>
@@ -215,7 +215,7 @@
             <h2 class="text-2xl font-bold text-white mb-6">Reseñas ({{ $product->reviews_count }})</h2>
             <div class="space-y-4">
                 @foreach($product->reviews->take(5) as $review)
-                <div class="bg-secondary rounded-lg p-4 border border-gray-700">
+                <div class="bg-neutral-900 rounded-lg p-4 border border-gray-700">
                     <div class="flex items-center justify-between mb-2">
                         <div class="flex items-center">
                             <div class="flex text-yellow-400 mr-3">
@@ -248,7 +248,7 @@
             <h2 class="text-2xl font-bold text-white mb-6">Productos Relacionados</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 @foreach($relatedProducts as $relatedProduct)
-                <div class="bg-secondary rounded-lg border border-gray-700 hover:border-primary transition-colors group">
+                <div class="bg-neutral-900 rounded-lg border border-gray-700 hover:border-red-700 transition-colors group">
                     <div class="relative">
                         <a href="{{ route('product.show', $relatedProduct->id) }}">
                             <img src="{{ $relatedProduct->primary_image_url }}" 

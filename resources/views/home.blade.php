@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'BeltSpot - Tu Tienda Online')
-@section('description', 'Descubre los mejores productos en BeltSpot')
+@section('title', 'Beltspot - Tu Tienda Online')
+@section('description', 'Descubre los mejores productos en Beltspot')
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-dark to-darker py-20">
+<section class="relative bg-black py-20">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -20,7 +20,7 @@
                         <i class="fas fa-shopping-bag mr-2"></i>
                         Ver Productos
                     </a>
-                    <a href="{{ route('categories') }}" class="border border-gray-600 hover:border-primary text-gray-300 hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center justify-center">
+                    <a href="{{ route('categories') }}" class="border border-gray-600 hover:border-red-700 text-gray-300 hover:text-red-700 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center justify-center">
                         <i class="fas fa-tags mr-2"></i>
                         Categorías
                     </a>
@@ -29,25 +29,25 @@
             <div class="hidden lg:block">
                 <div class="relative">
                     <div class="absolute inset-0 bg-primary opacity-10 rounded-full blur-3xl"></div>
-                    <div class="relative bg-secondary rounded-2xl p-8 border border-gray-700">
+                    <div class="relative bg-neutral-900 rounded-2xl p-8 border border-gray-800">
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-dark rounded-lg p-4 border border-gray-700">
-                                <i class="fas fa-shipping-fast text-primary text-2xl mb-2"></i>
+                            <div class="bg-neutral-800 rounded-lg p-4">
+                                <i class="fas fa-shipping-fast text-red-700 text-2xl mb-2"></i>
                                 <h3 class="text-white font-semibold">Envío Gratis</h3>
                                 <p class="text-gray-400 text-sm">En compras superiores a $50.000</p>
                             </div>
-                            <div class="bg-dark rounded-lg p-4 border border-gray-700">
-                                <i class="fas fa-shield-alt text-primary text-2xl mb-2"></i>
+                            <div class="bg-neutral-800 rounded-lg p-4">
+                                <i class="fas fa-shield-alt text-red-700 text-2xl mb-2"></i>
                                 <h3 class="text-white font-semibold">Compra Segura</h3>
                                 <p class="text-gray-400 text-sm">Pago seguro con MercadoPago</p>
                             </div>
-                            <div class="bg-dark rounded-lg p-4 border border-gray-700">
-                                <i class="fas fa-undo text-primary text-2xl mb-2"></i>
+                            <div class="bg-neutral-800 rounded-lg p-4">
+                                <i class="fas fa-undo text-red-700 text-2xl mb-2"></i>
                                 <h3 class="text-white font-semibold">Devolución</h3>
                                 <p class="text-gray-400 text-sm">30 días para devoluciones</p>
                             </div>
-                            <div class="bg-dark rounded-lg p-4 border border-gray-700">
-                                <i class="fas fa-headset text-primary text-2xl mb-2"></i>
+                            <div class="bg-neutral-800 rounded-lg p-4">
+                                <i class="fas fa-headset text-red-700 text-2xl mb-2"></i>
                                 <h3 class="text-white font-semibold">Soporte 24/7</h3>
                                 <p class="text-gray-400 text-sm">Atención al cliente</p>
                             </div>
@@ -60,7 +60,7 @@
 </section>
 
 <!-- Categorías Destacadas -->
-<section class="py-16 bg-dark">
+<section class="py-16 bg-black">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-white mb-4">Categorías Destacadas</h2>
@@ -70,7 +70,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             @foreach($featuredCategories ?? [] as $category)
             <a href="{{ route('products', ['category' => $category->id]) }}" class="group">
-                <div class="bg-secondary rounded-lg p-6 border border-gray-700 hover:border-primary transition-colors">
+                <div class="bg-neutral-900 rounded-lg p-6 border border-gray-800 hover:border-red-700 transition-colors">
                     <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-red-700 transition-colors">
                         <i class="fas fa-tag text-white text-xl"></i>
                     </div>
@@ -83,7 +83,7 @@
             <!-- Categorías de ejemplo si no hay datos -->
             @if(empty($featuredCategories))
             <a href="#" class="group">
-                <div class="bg-secondary rounded-lg p-6 border border-gray-700 hover:border-primary transition-colors">
+                <div class="bg-neutral-900 rounded-lg p-6 border border-gray-800 hover:border-red-700 transition-colors">
                     <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-red-700 transition-colors">
                         <i class="fas fa-tshirt text-white text-xl"></i>
                     </div>
@@ -92,7 +92,7 @@
                 </div>
             </a>
             <a href="#" class="group">
-                <div class="bg-secondary rounded-lg p-6 border border-gray-700 hover:border-primary transition-colors">
+                <div class="bg-neutral-900 rounded-lg p-6 border border-gray-800 hover:border-red-700 transition-colors">
                     <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-red-700 transition-colors">
                         <i class="fas fa-mobile-alt text-white text-xl"></i>
                     </div>
@@ -101,7 +101,7 @@
                 </div>
             </a>
             <a href="#" class="group">
-                <div class="bg-secondary rounded-lg p-6 border border-gray-700 hover:border-primary transition-colors">
+                <div class="bg-neutral-900 rounded-lg p-6 border border-gray-800 hover:border-red-700 transition-colors">
                     <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-red-700 transition-colors">
                         <i class="fas fa-home text-white text-xl"></i>
                     </div>
@@ -110,7 +110,7 @@
                 </div>
             </a>
             <a href="#" class="group">
-                <div class="bg-secondary rounded-lg p-6 border border-gray-700 hover:border-primary transition-colors">
+                <div class="bg-neutral-900 rounded-lg p-6 border border-gray-800 hover:border-red-700 transition-colors">
                     <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-red-700 transition-colors">
                         <i class="fas fa-dumbbell text-white text-xl"></i>
                     </div>
@@ -124,7 +124,7 @@
 </section>
 
 <!-- Productos Destacados -->
-<section class="py-16 bg-darker">
+<section class="py-16 bg-neutral-900">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-white mb-4">Productos Destacados</h2>
@@ -133,7 +133,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach($featuredProducts ?? [] as $product)
-            <div class="bg-secondary rounded-lg border border-gray-700 hover:border-primary transition-colors group">
+            <div class="bg-neutral-900 rounded-lg border border-gray-800 hover:border-red-700 transition-colors group">
                 <div class="relative">
                     <img src="{{ $product->primary_image_url }}" 
                          alt="{{ $product->name }}" 
@@ -179,7 +179,7 @@
             <!-- Productos de ejemplo si no hay datos -->
             @if(empty($featuredProducts))
             @for($i = 1; $i <= 4; $i++)
-            <div class="bg-secondary rounded-lg border border-gray-700 hover:border-primary transition-colors group">
+            <div class="bg-neutral-900 rounded-lg border border-gray-800 hover:border-red-700 transition-colors group">
                 <div class="relative">
                     <div class="w-full h-48 bg-gray-700 rounded-t-lg flex items-center justify-center">
                         <i class="fas fa-image text-gray-500 text-3xl"></i>
@@ -232,7 +232,7 @@
 </section>
 
 <!-- Características -->
-<section class="py-16 bg-dark">
+<section class="py-16 bg-black">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="text-center">

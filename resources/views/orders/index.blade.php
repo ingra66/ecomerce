@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Mis Pedidos - BeltSpot')
+@section('title', 'Mis Pedidos - Beltspot')
 @section('description', 'Revisa el historial de tus compras')
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
             <!-- Header -->
@@ -16,7 +16,7 @@
             @if($orders->count() > 0)
                 <div class="space-y-6">
                     @foreach($orders as $order)
-                        <div class="bg-secondary rounded-lg border border-gray-700 overflow-hidden">
+                        <div class="bg-neutral-900 rounded-lg border border-gray-700 overflow-hidden">
                             <!-- Header de la Orden -->
                             <div class="p-6 border-b border-gray-700">
                                 <div class="flex items-center justify-between">
@@ -85,7 +85,7 @@
                                 </div>
                                 
                                 <!-- Información de Envío -->
-                                <div class="mt-6 p-4 bg-dark rounded-lg border border-gray-700">
+                                <div class="mt-6 p-4 bg-black rounded-lg border border-gray-700">
                                     <h4 class="text-white font-semibold mb-2">
                                         <i class="fas fa-shipping-fast text-primary mr-2"></i>
                                         Dirección de Envío

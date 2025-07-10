@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Contacto - BeltSpot')
+@section('title', 'Contacto - Beltspot')
 @section('description', 'Contáctanos para cualquier consulta')
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <!-- Header -->
         <div class="text-center mb-12">
@@ -15,7 +15,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <!-- Información de Contacto -->
             <div>
-                <div class="bg-secondary rounded-lg p-8 border border-gray-700">
+                <div class="bg-neutral-900 rounded-lg p-8 border border-gray-700">
                     <h2 class="text-2xl font-bold text-white mb-6">Información de Contacto</h2>
                     
                     <div class="space-y-6">
@@ -83,7 +83,7 @@
 
             <!-- Formulario de Contacto -->
             <div>
-                <div class="bg-secondary rounded-lg p-8 border border-gray-700">
+                <div class="bg-neutral-900 rounded-lg p-8 border border-gray-700">
                     <h2 class="text-2xl font-bold text-white mb-6">Envíanos un Mensaje</h2>
                     
                     <form method="POST" action="#" class="space-y-6">
@@ -96,7 +96,7 @@
                                        id="name" 
                                        name="name" 
                                        required
-                                       class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary">
+                                       class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary">
                             </div>
                             <div>
                                 <label for="email" class="block text-gray-300 text-sm font-medium mb-2">Email</label>
@@ -104,7 +104,7 @@
                                        id="email" 
                                        name="email" 
                                        required
-                                       class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary">
+                                       class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary">
                             </div>
                         </div>
 
@@ -113,7 +113,7 @@
                             <select id="subject" 
                                     name="subject" 
                                     required
-                                    class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 focus:outline-none focus:border-primary">
+                                    class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 focus:outline-none focus:border-primary">
                                 <option value="">Selecciona un asunto</option>
                                 <option value="general">Consulta General</option>
                                 <option value="product">Consulta sobre Producto</option>
@@ -130,7 +130,7 @@
                                       rows="5" 
                                       required
                                       placeholder="Escribe tu mensaje aquí..."
-                                      class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"></textarea>
+                                      class="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-400 focus:outline-none focus:border-primary"></textarea>
                         </div>
 
                         <button type="submit" 
@@ -145,9 +145,9 @@
 
         <!-- Mapa -->
         <div class="mt-12">
-            <div class="bg-secondary rounded-lg p-8 border border-gray-700">
+            <div class="bg-neutral-900 rounded-lg p-8 border border-gray-700">
                 <h2 class="text-2xl font-bold text-white mb-6">Ubicación</h2>
-                <div class="bg-dark rounded-lg h-64 flex items-center justify-center">
+                <div class="bg-black rounded-lg h-64 flex items-center justify-center">
                     <div class="text-center">
                         <i class="fas fa-map text-gray-500 text-4xl mb-4"></i>
                         <p class="text-gray-400">Mapa de ubicación</p>

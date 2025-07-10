@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Verificar Email - BeltSpot')
+@section('title', 'Verificar Email - Beltspot')
 @section('description', 'Verifica tu dirección de email')
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <div class="max-w-md mx-auto">
             <!-- Header -->
@@ -17,7 +17,7 @@
             </div>
 
             <!-- Contenido Principal -->
-            <div class="bg-secondary rounded-lg p-8 border border-gray-700">
+            <div class="bg-neutral-900 rounded-lg p-8 border border-gray-700">
                 @if (session('status'))
                     <div class="mb-6 p-4 bg-green-900 border border-green-700 rounded-lg">
                         <p class="text-green-300">{{ session('status') }}</p>
@@ -48,14 +48,14 @@
                 <form method="POST" action="{{ route('logout') }}" class="mb-6">
                     @csrf
                     <button type="submit" 
-                            class="w-full bg-dark border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
+                            class="w-full bg-black border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
                         <i class="fas fa-sign-out-alt mr-2"></i>
                         Cerrar Sesión
                     </button>
                 </form>
 
                 <!-- Información Adicional -->
-                <div class="p-4 bg-dark rounded-lg border border-gray-700">
+                <div class="p-4 bg-black rounded-lg border border-gray-700">
                     <h3 class="text-white font-semibold mb-2 text-sm">
                         <i class="fas fa-info-circle text-primary mr-2"></i>
                         ¿Por qué necesito verificar mi email?

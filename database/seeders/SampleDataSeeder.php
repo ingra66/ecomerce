@@ -294,5 +294,26 @@ class SampleDataSeeder extends Seeder
         foreach ($coupons as $coupon) {
             DB::table('coupons')->insert($coupon);
         }
+
+        // Crear proveedores de ejemplo si no existen
+        if (DB::table('suppliers')->count() == 0) {
+            \App\Models\Supplier::factory()->count(10)->create();
+        }
+        $supplierIds = DB::table('suppliers')->pluck('id')->toArray();
+
+        // Relacionar productos con proveedores y poblar 'enlace'
+        $productIds = DB::table('products')->pluck('id')->toArray();
+        foreach ($productIds as $productId) {
+            $asignados = collect($supplierIds)->random(rand(1, 2));
+            foreach ($asignados as $supplierId) {
+                DB::table('product_supplier')->insert([
+                    'product_id' => $productId,
+                    'supplier_id' => $supplierId,
+                    'enlace' => fake()->optional()->url(),
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ]);
+            }
+        }
     }
 } 

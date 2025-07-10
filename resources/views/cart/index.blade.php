@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Mi Carrito - BeltSpot')
+@section('title', 'Mi Carrito - Beltspot')
 @section('description', 'Revisa y gestiona los productos en tu carrito')
 
 @section('content')
-<div class="bg-dark min-h-screen py-8">
+<div class="bg-black min-h-screen py-8">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
             <!-- Header -->
@@ -17,7 +17,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <!-- Lista de Productos -->
                     <div class="lg:col-span-2">
-                        <div class="bg-secondary rounded-lg border border-gray-700">
+                        <div class="bg-neutral-900 rounded-lg border border-gray-700">
                             <div class="p-6 border-b border-gray-700">
                                 <h2 class="text-xl font-semibold text-white">Productos ({{ $itemCount }})</h2>
                             </div>
@@ -51,14 +51,14 @@
                                             <!-- Cantidad -->
                                             <div class="flex items-center space-x-2">
                                                 <button onclick="updateQuantity('{{ $item->id }}', -1)" 
-                                                        class="w-8 h-8 bg-dark border border-gray-700 rounded-lg text-gray-300 hover:text-primary hover:border-primary transition-colors">
+                                                        class="w-8 h-8 bg-black border border-gray-700 rounded-lg text-gray-300 hover:text-primary hover:border-primary transition-colors">
                                                     <i class="fas fa-minus text-xs"></i>
                                                 </button>
                                                 <span class="text-white font-semibold w-12 text-center" id="quantity-{{ $item->id }}">
                                                     {{ $item->quantity }}
                                                 </span>
                                                 <button onclick="updateQuantity('{{ $item->id }}', 1)" 
-                                                        class="w-8 h-8 bg-dark border border-gray-700 rounded-lg text-gray-300 hover:text-primary hover:border-primary transition-colors">
+                                                        class="w-8 h-8 bg-black border border-gray-700 rounded-lg text-gray-300 hover:text-primary hover:border-primary transition-colors">
                                                     <i class="fas fa-plus text-xs"></i>
                                                 </button>
                                             </div>
@@ -84,7 +84,7 @@
                     
                     <!-- Resumen del Pedido -->
                     <div class="lg:col-span-1">
-                        <div class="bg-secondary rounded-lg border border-gray-700 p-6 sticky top-4">
+                        <div class="bg-neutral-900 rounded-lg border border-gray-700 p-6 sticky top-4">
                             <h2 class="text-xl font-semibold text-white mb-6">Resumen del Pedido</h2>
                             
                             <!-- Detalles del Precio -->
@@ -114,20 +114,20 @@
                                 </a>
                                 
                                 <button onclick="clearCart()" 
-                                        class="w-full bg-dark border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
+                                        class="w-full bg-black border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors">
                                     <i class="fas fa-trash mr-2"></i>
                                     Vaciar Carrito
                                 </button>
                                 
                                 <a href="{{ route('products') }}" 
-                                   class="w-full bg-dark border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors text-center block">
+                                   class="w-full bg-black border border-gray-700 hover:border-primary text-gray-300 hover:text-primary py-3 rounded-lg font-semibold transition-colors text-center block">
                                     <i class="fas fa-arrow-left mr-2"></i>
                                     Seguir Comprando
                                 </a>
                             </div>
                             
                             <!-- Información Adicional -->
-                            <div class="mt-6 p-4 bg-dark rounded-lg border border-gray-700">
+                            <div class="mt-6 p-4 bg-black rounded-lg border border-gray-700">
                                 <h3 class="text-white font-semibold mb-2 text-sm">
                                     <i class="fas fa-shield-alt text-primary mr-2"></i>
                                     Compra Segura

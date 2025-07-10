@@ -88,6 +88,16 @@ class Product extends Model
     }
 
     /**
+     * Relación muchos a muchos con proveedores
+     */
+    public function suppliers()
+    {
+        return $this->belongsToMany(Supplier::class, 'product_supplier')
+            ->withPivot('enlace')
+            ->withTimestamps();
+    }
+
+    /**
      * Imagen principal
      */
     public function primaryImage(): HasOne

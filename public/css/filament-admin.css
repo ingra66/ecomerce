@@ -1,0 +1,279 @@
+/* Tema personalizado para Filament Admin - Oscuro con detalles rojos */
+
+/* Variables CSS personalizadas */
+:root {
+    --primary-50: 254 242 242;
+    --primary-100: 254 226 226;
+    --primary-200: 254 202 202;
+    --primary-300: 252 165 165;
+    --primary-400: 248 113 113;
+    --primary-500: 239 68 68;
+    --primary-600: 220 38 38;
+    --primary-700: 185 28 28;
+    --primary-800: 153 27 27;
+    --primary-900: 127 29 29;
+    --primary-950: 69 10 10;
+}
+
+/* Forzar modo oscuro */
+html.dark {
+    color-scheme: dark;
+}
+
+/* Estilos base */
+body {
+    background-color: rgb(15 23 42);
+    color: white;
+}
+
+/* Personalización del sidebar */
+.fi-sidebar {
+    background-color: rgb(15 23 42) !important;
+    border-right-color: rgb(239 68 68) !important;
+}
+
+.fi-sidebar-header {
+    background-color: rgb(239 68 68) !important;
+    color: white !important;
+}
+
+/* Personalización de botones */
+.fi-btn-primary {
+    background-color: rgb(239 68 68) !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+.fi-btn-primary:hover {
+    background-color: rgb(220 38 38) !important;
+    border-color: rgb(220 38 38) !important;
+}
+
+/* Personalización de formularios */
+.fi-fo-field-wrp {
+    border-color: rgb(239 68 68) !important;
+}
+
+.fi-fo-field-wrp:focus-within {
+    border-color: rgb(220 38 38) !important;
+    box-shadow: 0 0 0 1px rgb(220 38 38) !important;
+}
+
+/* Personalización de tablas */
+.fi-ta {
+    background-color: rgb(15 23 42) !important;
+}
+
+.fi-ta-header {
+    background-color: rgb(15 23 42) !important;
+    color: white !important;
+}
+
+.fi-ta-row:hover {
+    background-color: rgb(30 41 59) !important;
+}
+
+/* Personalización del header */
+.fi-header {
+    background-color: rgb(15 23 42) !important;
+    border-bottom-color: rgb(239 68 68) !important;
+}
+
+/* Personalización de navegación */
+.fi-nav-item {
+    color: rgb(203 213 225) !important;
+}
+
+.fi-nav-item:hover {
+    background-color: rgb(30 41 59) !important;
+    color: rgb(239 68 68) !important;
+}
+
+.fi-nav-item.fi-active {
+    background-color: rgb(239 68 68) !important;
+    color: white !important;
+}
+
+/* Personalización de widgets */
+.fi-wi {
+    background-color: rgb(15 23 42) !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+/* Personalización de modales */
+.fi-modal-window {
+    background-color: rgb(15 23 42) !important;
+    color: white !important;
+}
+
+/* Personalización de notificaciones */
+.fi-notification {
+    background-color: rgb(239 68 68) !important;
+    color: white !important;
+}
+
+/* Personalización de login */
+.fi-login-page {
+    background-color: rgb(15 23 42) !important;
+    color: white !important;
+}
+
+.fi-login-page .fi-fo-field-wrp {
+    background-color: rgb(30 41 59) !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+.fi-login-page .fi-btn {
+    background-color: rgb(239 68 68) !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+.fi-login-page .fi-btn:hover {
+    background-color: rgb(220 38 38) !important;
+    border-color: rgb(220 38 38) !important;
+}
+
+/* Personalización de enlaces */
+.fi-link {
+    color: rgb(239 68 68) !important;
+}
+
+.fi-link:hover {
+    color: rgb(220 38 38) !important;
+}
+
+/* Personalización de badges */
+.fi-badge {
+    background-color: rgb(239 68 68) !important;
+    color: white !important;
+}
+
+/* Personalización de breadcrumbs */
+.fi-breadcrumbs {
+    color: rgb(239 68 68) !important;
+}
+
+/* Personalización de paginación */
+.fi-pagination {
+    background-color: rgb(15 23 42) !important;
+}
+
+.fi-pagination .fi-btn {
+    background-color: rgb(30 41 59) !important;
+    border-color: rgb(239 68 68) !important;
+    color: rgb(203 213 225) !important;
+}
+
+.fi-pagination .fi-btn:hover {
+    background-color: rgb(239 68 68) !important;
+    color: white !important;
+}
+
+.fi-pagination .fi-btn.fi-active {
+    background-color: rgb(239 68 68) !important;
+    color: white !important;
+}
+
+/* Personalización de filtros */
+.fi-filters-panel {
+    background-color: rgb(15 23 42) !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+/* Personalización de acciones */
+.fi-actions {
+    background-color: rgb(15 23 42) !important;
+}
+
+.fi-actions .fi-btn {
+    background-color: rgb(30 41 59) !important;
+    border-color: rgb(239 68 68) !important;
+    color: rgb(203 213 225) !important;
+}
+
+.fi-actions .fi-btn:hover {
+    background-color: rgb(239 68 68) !important;
+    color: white !important;
+}
+
+/* Personalización de tooltips */
+.fi-tooltip {
+    background-color: rgb(15 23 42) !important;
+    color: white !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+/* Personalización de dropdowns */
+.fi-dropdown {
+    background-color: rgb(15 23 42) !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+.fi-dropdown .fi-dropdown-item {
+    color: rgb(203 213 225) !important;
+}
+
+.fi-dropdown .fi-dropdown-item:hover {
+    background-color: rgb(30 41 59) !important;
+    color: rgb(239 68 68) !important;
+}
+
+/* Personalización de checkboxes y radios */
+.fi-checkbox input:checked {
+    background-color: rgb(239 68 68) !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+.fi-radio input:checked {
+    background-color: rgb(239 68 68) !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+/* Personalización de switches */
+.fi-switch input:checked {
+    background-color: rgb(239 68 68) !important;
+}
+
+/* Personalización de búsqueda */
+.fi-search {
+    background-color: rgb(30 41 59) !important;
+    border-color: rgb(239 68 68) !important;
+    color: white !important;
+}
+
+.fi-search:focus {
+    border-color: rgb(220 38 38) !important;
+    box-shadow: 0 0 0 1px rgb(220 38 38) !important;
+}
+
+/* Personalización de loading */
+.fi-loading {
+    color: rgb(239 68 68) !important;
+}
+
+/* Personalización de errores */
+.fi-error {
+    color: rgb(239 68 68) !important;
+    background-color: rgb(15 23 42) !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+/* Personalización de warnings */
+.fi-warning {
+    color: rgb(239 68 68) !important;
+    background-color: rgb(15 23 42) !important;
+    border-color: rgb(239 68 68) !important;
+}
+
+/* Personalización de success */
+.fi-success {
+    color: rgb(34 197 94) !important;
+    background-color: rgb(15 23 42) !important;
+    border-color: rgb(34 197 94) !important;
+}
+
+/* Personalización de info */
+.fi-info {
+    color: rgb(59 130 246) !important;
+    background-color: rgb(15 23 42) !important;
+    border-color: rgb(59 130 246) !important;
+} 
